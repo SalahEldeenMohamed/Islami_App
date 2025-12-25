@@ -3,7 +3,11 @@
 "sura_name" : "Sura Name",
 "azkar_name" : "Azkar Name",
 "quran" : "Quran",
-"azkar" : "azkar",
-"salh" : "salh",
-"do3aa" : "do3aa"
+"azkar" : "Azkar",
+"salh" : "Salh",
+"do3aa" : "Do3aa",
+"settings" : "Settings",
+"language" : "Language",
+"arabic" : "Arabic",
+"english" : "English"
 }

@@ -3,6 +3,7 @@ import 'package:islamic_app/Home/azkar/azkar.dart';
 import 'package:islamic_app/Home/do3aa/do3aa.dart';
 import 'package:islamic_app/Home/quran/quran.dart';
 import 'package:islamic_app/Home/salh/salh.dart';
+import 'package:islamic_app/Home/settings/settings.dart';
 import 'package:islamic_app/l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -64,6 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: ImageIcon(AssetImage('assets/images/do3aa.png')),
                     label: AppLocalizations.of(context)!.do3aa,
                   ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.settings),
+                    label: AppLocalizations.of(context)!.settings,
+                  ),
                 ]
             ),
           ),
@@ -75,5 +80,5 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 List<Widget> tabs = [
-  QuranTab(), AzkarTab(), SalhTab(), Do3aaTab()
+  QuranTab(), AzkarTab(), SalhTab(), Do3aaTab(), SettingsTab()
 ];
