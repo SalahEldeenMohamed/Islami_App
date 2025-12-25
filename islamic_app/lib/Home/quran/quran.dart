@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_app/Home/quran/item_sura_name.dart';
 import 'package:islamic_app/app_colors.dart';
+import 'package:islamic_app/l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   List<String> quranSurahNames = [
@@ -130,7 +131,7 @@ class QuranTab extends StatelessWidget {
           color: AppColors.primaryLightColor,
           thickness: 3,
         ),
-        Text('Sura Name',
+        Text(AppLocalizations.of(context)!.sura_name,
           style: Theme
               .of(context)
               .textTheme
