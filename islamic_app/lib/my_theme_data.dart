@@ -18,6 +18,21 @@ class MyThemeData {
         fontSize: 30,
         fontWeight: FontWeight.bold,
       ),
+      bodyMedium: TextStyle(
+        color: AppColors.blackColor,
+        fontSize: 25,
+        fontWeight: FontWeight.w700,
+      ),
+      bodySmall: TextStyle(
+        color: AppColors.blackColor,
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+      ),
+      titleLarge: TextStyle(
+        color: AppColors.blackColor,
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+      ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: AppColors.blackColor,
