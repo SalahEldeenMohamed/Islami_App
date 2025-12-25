@@ -3,6 +3,7 @@ import 'package:islamic_app/Home/azkar/azkar.dart';
 import 'package:islamic_app/Home/do3aa/do3aa.dart';
 import 'package:islamic_app/Home/quran/quran.dart';
 import 'package:islamic_app/Home/salh/salh.dart';
+import 'package:islamic_app/l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Scaffold(
           appBar: AppBar(
-            title: Text('Islami',
+            title: Text(AppLocalizations.of(context)!.app_title,
               style: Theme
                   .of(context)
                   .textTheme
@@ -49,19 +50,19 @@ class _HomeScreenState extends State<HomeScreen> {
                 items: [
                   BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/quran.png')),
-                    label: 'Quran',
+                    label: AppLocalizations.of(context)!.quran,
                   ),
                   BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/azkar.png')),
-                    label: 'azkar',
+                    label: AppLocalizations.of(context)!.azkar,
                   ),
                   BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/salh.png')),
-                    label: 'salh',
+                    label: AppLocalizations.of(context)!.salh,
                   ),
                   BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage('assets/images/do3aa.png')),
-                    label: 'do3aa',
+                    label: AppLocalizations.of(context)!.do3aa,
                   ),
                 ]
             ),

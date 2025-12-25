@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamic_app/l10n/app_localizations.dart';
 
 import '../../app_colors.dart';
 import 'item_azkar_name.dart';
@@ -24,7 +25,7 @@ class _AzkarTabState extends State<AzkarTab> {
           color: AppColors.primaryLightColor,
           thickness: 3,
         ),
-        Text('Azkar Name',
+        Text(AppLocalizations.of(context)!.azkar_name,
           style: Theme
               .of(context)
               .textTheme
