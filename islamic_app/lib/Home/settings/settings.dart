@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_app/Home/settings/language_bottom_sheet.dart';
+import 'package:islamic_app/Home/settings/theme_bottom_sheet.dart';
 import 'package:islamic_app/app_colors.dart';
 import 'package:islamic_app/l10n/app_localizations.dart';
 import 'package:islamic_app/providers/app_config_provider.dart';
@@ -50,6 +51,35 @@ class _SettingsTabState extends State<SettingsTab> {
               ),
             ),
           ),
+          SizedBox(height: 25),
+          Text(
+            AppLocalizations.of(context)!.theme,
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+          InkWell(
+            onTap: () {
+              showThemeBottomSheet();
+            },
+            child: Container(
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                color: AppColors.primaryLightColor,
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    provider.appTheme == ThemeMode.dark
+                        ? AppLocalizations.of(context)!.dark
+                        : AppLocalizations.of(context)!.light,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                  Icon(Icons.arrow_drop_down, size: 35),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -59,6 +89,13 @@ class _SettingsTabState extends State<SettingsTab> {
     showModalBottomSheet(
       context: context,
       builder: (context) => LanguageBottomSheet(),
+    );
+  }
+
+  void showThemeBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => ThemeBottomSheet(),
     );
   }
 }

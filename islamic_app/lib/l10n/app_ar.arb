@@ -9,5 +9,8 @@
 "settings" : "الاعدادات",
 "language" : "اللغة",
 "arabic" : "عربي",
-"english" : "انجليزي"
+"english" : "انجليزي",
+"theme" : "النمط",
+"dark" : "ليلي",
+"light" : "نهاري"
 }

@@ -5,6 +5,8 @@ import 'package:islamic_app/Home/quran/quran.dart';
 import 'package:islamic_app/Home/salh/salh.dart';
 import 'package:islamic_app/Home/settings/settings.dart';
 import 'package:islamic_app/l10n/app_localizations.dart';
+import 'package:islamic_app/providers/app_config_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -19,9 +21,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return Stack(
       children: [
+        provider.appTheme == ThemeMode.light ?
         Image.asset('assets/images/background.png',
+          width: double.infinity,
+          height: double.infinity,
+          fit: BoxFit.fill,
+        ) :
+        Image.asset('assets/images/darkbackground.png',
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.fill,
