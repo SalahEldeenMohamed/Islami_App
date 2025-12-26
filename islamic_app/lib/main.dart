@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_app/providers/app_config_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'Home/azkar/azkar_details_screen.dart';
 import 'Home/home_screen.dart';
@@ -7,7 +9,10 @@ import 'l10n/app_localizations.dart';
 import 'my_theme_data.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+      create: (context) => AppConfigProvider(),
+      child: MyApp())
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
@@ -27,7 +33,9 @@ class MyApp extends StatelessWidget {
       title: 'Localizations Sample App',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale('en'),
+      locale: Locale(provider.appLanguage),
+      themeMode: provider.appTheme,
+      darkTheme: MyThemeData.darkMode,
     );
   }
 }

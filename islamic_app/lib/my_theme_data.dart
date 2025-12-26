@@ -40,4 +40,40 @@ class MyThemeData {
       showUnselectedLabels: true,
     ),
   );
+  static final ThemeData darkMode = ThemeData(
+    scaffoldBackgroundColor: Colors.transparent,
+    primaryColor: AppColors.primaryDarkColor,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      centerTitle: true,
+    ),
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(
+        color: AppColors.whiteColor,
+        fontSize: 30,
+        fontWeight: FontWeight.bold,
+      ),
+      bodyMedium: TextStyle(
+        color: AppColors.whiteColor,
+        fontSize: 25,
+        fontWeight: FontWeight.w700,
+      ),
+      bodySmall: TextStyle(
+        color: AppColors.whiteColor,
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
+      ),
+      titleLarge: TextStyle(
+        color: AppColors.whiteColor,
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
+      ),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: AppColors.yellowColor,
+      unselectedItemColor: AppColors.whiteColor,
+      showUnselectedLabels: true,
+    ),
+  );
 }
